@@ -7,7 +7,6 @@ class Node {
 }
 
 export class LinkedList implements Sortable {
-  constructor(public data: number) {}
   head: Node | null = null;
 
   add(value: number): void {

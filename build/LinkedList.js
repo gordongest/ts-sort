@@ -8,8 +8,7 @@ class Node {
     }
 }
 class LinkedList {
-    constructor(data) {
-        this.data = data;
+    constructor() {
         this.head = null;
     }
     add(value) {
