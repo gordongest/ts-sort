@@ -1,7 +1,10 @@
-import { Sortable } from './Sorter';
+// import { Sortable } from './Sorter';
+import { Sorter } from './Sorter';
 
-export class CharactersCollection implements Sortable {
-  constructor(public data: string) {}
+export class CharactersCollection extends Sorter {
+  constructor(public data: string) {
+    super();
+  }
 
   get length(): number {
     return this.data.length;
@@ -17,7 +20,7 @@ export class CharactersCollection implements Sortable {
     const temp = charsArr[leftIdx];
     charsArr[leftIdx] = charsArr[rightIdx];
     charsArr[rightIdx] = temp;
-    
+
     this.data = charsArr.join('');
   }
 }

@@ -1,4 +1,4 @@
-import { Sortable } from './Sorter'
+// import { Sortable } from './Sorter'
 import { Sorter } from './Sorter'
 
 export class NumbersCollection extends Sorter {
