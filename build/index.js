@@ -5,7 +5,7 @@ var Sorter = /** @class */ (function () {
         this.collection = collection;
         // this.collection = collection;
     }
-    Sorter.prototype.sort = function () {
+    Sorter.prototype.bubbleSort = function () {
         var length = this.collection.length;
         for (var i = 0; i < length; i++) {
             for (var j = 0; j < length - i - 1; j++) {
@@ -20,5 +20,5 @@ var Sorter = /** @class */ (function () {
     return Sorter;
 }());
 var sorter = new Sorter([4, 3, 10, -1]);
-sorter.sort();
+sorter.bubbleSort();
 console.log(sorter.collection);

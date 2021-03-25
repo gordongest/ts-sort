@@ -5,7 +5,7 @@ class Sorter {
     // this.collection = collection;
   }
 
-  sort(): void {
+  bubbleSort(): void {
     const { length } = this.collection;
 
     for (let i = 0; i < length; i++) {
@@ -21,5 +21,5 @@ class Sorter {
 }
 
 const sorter = new Sorter([4, 3, 10, -1]);
-sorter.sort();
+sorter.bubbleSort();
 console.log(sorter.collection);
