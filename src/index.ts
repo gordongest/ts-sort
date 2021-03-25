@@ -1,4 +1,4 @@
-import { Sorter } from './Sorter';
+// import { Sorter } from './Sorter';
 import { NumbersCollection } from './NumbersCollection';
 import { CharactersCollection } from './CharactersCollection';
 import { LinkedList } from './LinkedList';
@@ -29,6 +29,6 @@ linkedList.add(-60);
 linkedList.bubbleSort();
 linkedList.print();
 
-/* while the above works, it is possible to refactor sorter
-to make it available as a method on all of the disparate classes,
-by taking advantage of classical inheritance */
+/* while the above commented code works, it is possible to refactor
+sorter to make it available as a method on all of the disparate classes,
+by taking advantage of classical inheritance/abstract classes */
