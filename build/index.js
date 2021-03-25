@@ -21,3 +21,6 @@ linkedList.add(-60);
 sorter = new Sorter_1.Sorter(linkedList);
 sorter.bubbleSort();
 linkedList.print();
+/* while the above works, it is possible to refactor sorter
+to make it available as a method on all of the disparate classes,
+by taking advantage of classical inheritance */
