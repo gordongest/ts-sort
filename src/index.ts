@@ -1,5 +1,7 @@
 import { Sorter } from './Sorter'
+import { NumbersCollection } from './NumbersCollection'
 
-const sorter = new Sorter([4, 3, 10, -1]);
+const numbersCollection = new NumbersCollection([5, 2, 11, -2]);
+const sorter = new Sorter(numbersCollection)
 sorter.bubbleSort();
 console.log(sorter.collection);

@@ -1,25 +1,24 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Sorter = void 0;
-var Sorter = /** @class */ (function () {
+class Sorter {
     // collection: number[] | string;
-    function Sorter(collection /* number[] | string */) {
+    /* equivalent to commented code */
+    constructor(collection) {
         this.collection = collection;
         // this.collection = collection;
     }
-    Sorter.prototype.bubbleSort = function () {
-        var length = this.collection.length;
-        for (var i = 0; i < length; i++) {
-            for (var j = 0; j < length - i - 1; j++) {
-                if (this.collection[j] > this.collection[j + 1]) {
-                    var temp = this.collection[j];
-                    this.collection[j] = this.collection[j + 1];
-                    this.collection[j + 1] = temp;
+    bubbleSort() {
+        const { length } = this.collection;
+        for (let i = 0; i < length; i++) {
+            for (let j = 0; j < length - i - 1; j++) {
+                if (this.collection.compare(j, j + 1)) {
+                    this.collection.swap(j, j + 1);
                 }
                 /*
-                the below implementation is less than ideal because it would require refactoring
-                for every different type of value in order to support sorting them
-                */
+              the below implementation is less than ideal because it would require refactoring
+              for every different type of value in order to support sorting them
+              */
                 //     /* if collection is an array of numbers */
                 //     if (this.collection instanceof Array) { /* type guard! 'instanceof' used for non-primitives */
                 //       if (this.collection[j] > this.collection[j + 1]) {
@@ -39,7 +38,6 @@ var Sorter = /** @class */ (function () {
                 //     }
             }
         }
-    };
-    return Sorter;
-}());
+    }
+}
 exports.Sorter = Sorter;
