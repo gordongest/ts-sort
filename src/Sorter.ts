@@ -1,8 +1,8 @@
 /* create an interface to ensure conformity */
 export interface Sortable {
   length: number;
-  compare(leftIdx:number,rightIdx:number): boolean;
-  swap(leftIdx:number,rightIdx:number): void;
+  compare(leftIdx: number, rightIdx: number): boolean;
+  swap(leftIdx: number, rightIdx: number): void;
 }
 
 export class Sorter {
@@ -18,12 +18,13 @@ export class Sorter {
 
     for (let i = 0; i < length; i++) {
       for (let j = 0; j < length - i - 1; j++) {
+        /* this implementation only relies on the interface, so it is re-usable */
         if (this.collection.compare(j, j + 1)) {
-          this.collection.swap(j, j + 1)
+          this.collection.swap(j, j + 1);
         }
 
         /*
-        the below implementation is less than ideal because it would require refactoring
+        the below implementation is not ideal because it would require refactoring
         for every different type of value in order to support sorting them
         */
 
@@ -46,7 +47,6 @@ export class Sorter {
         //     /* but we can't add another type/structure */
         //     if(this.collection instanceof LinkedList) {
         //     }
-
       }
     }
   }
