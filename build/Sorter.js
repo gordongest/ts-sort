@@ -16,9 +16,9 @@ class Sorter {
                     this.collection.swap(j, j + 1);
                 }
                 /*
-              the below implementation is less than ideal because it would require refactoring
-              for every different type of value in order to support sorting them
-              */
+                the below implementation is less than ideal because it would require refactoring
+                for every different type of value in order to support sorting them
+                */
                 //     /* if collection is an array of numbers */
                 //     if (this.collection instanceof Array) { /* type guard! 'instanceof' used for non-primitives */
                 //       if (this.collection[j] > this.collection[j + 1]) {

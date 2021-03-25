@@ -1,10 +1,15 @@
-import { NumbersCollection } from './NumbersCollection';
+/* create an interface to ensure conformity */
+export interface Sortable {
+  length: number;
+  compare(leftIdx:number,rightIdx:number): boolean;
+  swap(leftIdx:number,rightIdx:number): void;
+}
 
 export class Sorter {
   // collection: number[] | string;
 
   /* equivalent to commented code */
-  constructor(public collection: /* number[] | string */ NumbersCollection) {
+  constructor(public collection: /* number[] | string */ Sortable) {
     // this.collection = collection;
   }
 
@@ -18,9 +23,9 @@ export class Sorter {
         }
 
         /*
-      the below implementation is less than ideal because it would require refactoring
-      for every different type of value in order to support sorting them
-      */
+        the below implementation is less than ideal because it would require refactoring
+        for every different type of value in order to support sorting them
+        */
 
         //     /* if collection is an array of numbers */
         //     if (this.collection instanceof Array) { /* type guard! 'instanceof' used for non-primitives */
