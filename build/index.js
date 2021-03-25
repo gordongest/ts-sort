@@ -10,7 +10,7 @@ const numbersCollection = new NumbersCollection_1.NumbersCollection([5, 2, 11, -
 // console.log(sorter.collection);
 numbersCollection.bubbleSort();
 console.log(numbersCollection.data);
-const charactersCollection = new CharactersCollection_1.CharactersCollection('ZdFrQIi');
+const charactersCollection = new CharactersCollection_1.CharactersCollection('ZbAfr');
 // sorter = new Sorter(charactersCollection);
 // sorter.bubbleSort();
 // console.log(charactersCollection);
