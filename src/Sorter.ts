@@ -45,8 +45,8 @@ export class Sorter {
 
         //     /* but we can't add another type/structure */
         //     if(this.collection instanceof LinkedList) {
-
         //     }
+
       }
     }
   }
